@@ -56,6 +56,7 @@ export default function Chat() {
             senderId: currentUser.id,
             receiverId: otherUserId,
             text,
+            time: new Date().toISOString()
         }
 
         axios.post(apiUrl, newMsg).then(() => {

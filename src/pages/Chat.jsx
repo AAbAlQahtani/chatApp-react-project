@@ -96,6 +96,9 @@ export default function Chat() {
                             }`}
                     >
                         {msg.text}
+                        <div className="text-[10px] text-gray-600 mt-1">
+                            {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </div>
                     </div>
                 ))}
                 <div ref={messagesEndRef} />
